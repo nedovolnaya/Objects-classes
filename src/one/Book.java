@@ -2,7 +2,7 @@ package one;
 
 public class Book {
     private static String bookName;
-    private int publishingYear;
+    private static int publishingYear;
     private static Author author;
 
     public Book(String bookName, int publishingYear, Author author) {
@@ -32,15 +32,17 @@ public class Book {
     public String toString() {
         return "Название книги: " + this.bookName + " Год издания: " + this.publishingYear + this.author;
     }
-     @Override
+
+    @Override
 
     public boolean equals(Object other) {
-         if (this.getClass() != other.getClass()){
-             return false;
-     }
-         Book bookName = (Book) other;
-         return bookName.equals(Book.bookName) && author.equals(Book.author);
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Book bookName = (Book) other;
+        return bookName.equals(Book.bookName) && author.equals(Book.author) && (publishingYear == (Book.publishingYear));
     }
+
     @Override
     public int hashCode() {
         return java.util.Objects.hash(bookName, publishingYear, author);
