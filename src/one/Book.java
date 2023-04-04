@@ -1,9 +1,9 @@
 package one;
 
 public class Book {
-    private String bookName;
+    private static String bookName;
     private int publishingYear;
-    private Author author;
+    private static Author author;
 
     public Book(String bookName, int publishingYear, Author author) {
         this.bookName = bookName;
@@ -27,9 +27,25 @@ public class Book {
         this.publishingYear = publishingYear;
     }
 
+    @Override
+
     public String toString() {
         return "Название книги: " + this.bookName + " Год издания: " + this.publishingYear + this.author;
     }
+     @Override
+
+    public boolean equals(Object other) {
+         if (this.getClass() != other.getClass()){
+             return false;
+     }
+         Book bookName = (Book) other;
+         return bookName.equals(Book.bookName) && author.equals(Book.author);
+    }
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(bookName, publishingYear, author);
+    }
 }
+
 
 
