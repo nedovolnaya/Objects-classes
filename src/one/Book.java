@@ -3,7 +3,6 @@ package one;
 public class Book {
     private String bookName;
     private int publishingYear;
-
     private Author author;
 
     public Book(String bookName, int publishingYear, Author author) {
@@ -26,6 +25,10 @@ public class Book {
 
     public void setPublishingYear(int publishingYear) {
         this.publishingYear = publishingYear;
+    }
+
+    public String toString() {
+        return "Название книги: " + this.bookName + " Год издания: " + this.publishingYear + this.author;
     }
 }
 

@@ -16,4 +16,8 @@ public class Author {
     public String getAuthorSurname() {
         return this.authorSurname;
     }
+
+    public String toString() {
+        return " Имя автора: " + this.authorName + " Фамилия автора: " + this.authorSurname;
+    }
 }

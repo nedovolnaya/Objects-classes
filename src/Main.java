@@ -13,6 +13,7 @@ public class Main {
         System.out.println("ulysses.publishingYear = " + ulysses.getPublishingYear());
         ulysses.setPublishingYear(1921);
         System.out.println("ulysses.getPublishingYear() = " + ulysses.getPublishingYear());
+        System.out.println(ulysses);
         System.out.println();
 
         Author tolstoy = new Author("Лев", "Толстой");
@@ -23,6 +24,7 @@ public class Main {
         System.out.println("annaKarenina.publishingYear = " + annaKarenina.getPublishingYear());
         annaKarenina.setPublishingYear(1879);
         System.out.println("annaKarenina.getPublishingYear() = " + annaKarenina.getPublishingYear());
+        System.out.println(annaKarenina);
         System.out.println();
 
         Author jamesJoyce = new Author("Джеймс", "Джойс");
