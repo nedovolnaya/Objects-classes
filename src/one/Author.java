@@ -1,8 +1,8 @@
 package one;
 
 public class Author {
-    private String authorName;
-    private String authorSurname;
+    private final String authorName;
+    private final String authorSurname;
 
     public Author(String authorName, String authorSurname) {
         this.authorName = authorName;
@@ -30,8 +30,9 @@ public class Author {
             return false;
         }
         Author author = (Author) other;
-        return authorName.equals(author.authorName) && authorSurname.equals(author.authorSurname);
+        return this.authorName.equals(author.authorName) && this.authorSurname.equals(author.authorSurname);
     }
+
 
     @Override
     public int hashCode() {

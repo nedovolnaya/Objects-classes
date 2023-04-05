@@ -7,7 +7,6 @@ public class Main {
 
         Author joyce = new Author("Джеймс", "Джойс");
         Book ulysses = new Book("Улисс", 1920, joyce);
-
         System.out.println("ulysses.bookName = " + ulysses.getBookName());
         System.out.println("ulysses.getAuthor() = " + ulysses.getAuthor().getAuthorName() + " " +
                 ulysses.getAuthor().getAuthorSurname());
@@ -36,7 +35,7 @@ public class Main {
         Author leoTolstoy = new Author("Лев", "Толстой");
         System.out.println("leoTolstoy.authorName = " + leoTolstoy.getAuthorName());
         System.out.println("leoTolstoy.authorSurname = " + leoTolstoy.getAuthorSurname());
-        System.out.println(tolstoy.equals(joyce));
+        System.out.println(tolstoy.equals(tolstoy));
         System.out.println(annaKarenina.equals(ulysses));
 
     }

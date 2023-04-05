@@ -1,9 +1,11 @@
 package one;
 
+import java.util.Objects;
+
 public class Book {
-    private static String bookName;
-    private static int publishingYear;
-    private static Author author;
+    private final String bookName;
+    private int publishingYear;
+    private final Author author;
 
     public Book(String bookName, int publishingYear, Author author) {
         this.bookName = bookName;
@@ -34,13 +36,13 @@ public class Book {
     }
 
     @Override
-
     public boolean equals(Object other) {
         if (this.getClass() != other.getClass()) {
             return false;
         }
-        Book bookName = (Book) other;
-        return bookName.equals(Book.bookName) && author.equals(Book.author) && (publishingYear == (Book.publishingYear));
+        Book book = (Book) other;
+        return this.bookName.equals(book.bookName) && (this.publishingYear == (book.publishingYear)
+                && this.author.equals(book.author));
     }
 
     @Override
@@ -48,6 +50,3 @@ public class Book {
         return java.util.Objects.hash(bookName, publishingYear, author);
     }
 }
-
-
-
